@@ -1,93 +1,99 @@
-```markdown
-# Indeed Scraper using Apify
+-----
 
-This project scrapes job postings from **Indeed** using the **Apify Indeed Scraper**.  
-It fetches job details (title, company, location, salary, job type, rating, reviews, posted date, apply link, and description) and saves the results into a clean **CSV file** for analysis.
+# Indeed Job Scraper with Apify 🤖
 
----
+This project automates scraping job postings from **Indeed** using the **Apify Indeed Scraper**. It extracts key details, cleans the job description, and saves the data into a structured **CSV file** ready for analysis.
 
-## 🚀 Features
-- Fetch job postings from Indeed automatically  
-- Extracts and cleans job descriptions (removes HTML tags)  
-- Saves results in a structured **CSV file**  
-- Keeps API keys secure with **.env**  
+-----
 
----
+## ✨ Key Features
+
+  - ✅ **Automated Scraping**: Fetches job postings from Indeed based on your search query.
+  - 🧹 **Data Cleaning**: Automatically removes HTML tags from job descriptions for clean, readable text.
+  - 📄 **Structured Output**: Saves all extracted data into a well-organized `.csv` file.
+  - 🔐 **Secure**: Keeps your API keys safe and out of the codebase using a `.env` file.
+
+-----
 
 ## 📂 Project Structure
+
+```
+.
+├── job_scraper.py      # Main Python script for the scraper
+├── .env                # Stores APIFY_TOKEN and ACTOR_ID (kept private)
+├── requirements.txt    # Python dependencies
+└── README.md           # Project documentation
 ```
 
-├── job\_scraper.py         # Main Python script for the scraper
-├── .env                   # Stores APIFY\_TOKEN and ACTOR\_ID (not committed to GitHub)
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
+-----
 
-````
+## 🚀 Getting Started
 
----
+### Prerequisites
 
-## 🛠️ Setup & Installation
+  - Python 3.x
+  - An [Apify account](https://apify.com/) (a free account with credits is available)
 
-1. **Clone this repository**
-   ```bash
-   git clone https://github.com/Karthih2/Cybernaut-Project-Indeed-Web-Scraper.git
-   cd Cybernaut-Project-Indeed-Web-Scraper
-````
+### 🛠️ Installation & Setup
 
-2. **Install dependencies**
+1.  **Clone the Repository**
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+    ```bash
+    git clone https://github.com/Karthih2/Cybernaut-Project-Indeed-Web-Scraper.git
+    cd Cybernaut-Project-Indeed-Web-Scraper
+    ```
 
-3. **Get your Apify API Token & Actor ID**
+2.  **Install Dependencies**
 
-   * Go to [Apify Indeed Scraper](https://apify.com/apify/indeed-scraper)
-   * Click **Try for free** and sign in (new accounts get free credits)
-   * Copy your **API Token** and **Actor ID** from the Apify dashboard
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-4. **Update your `.env` file**
-   Create a `.env` file in the project root (template included):
+3.  **Configure Environment Variables**
 
-   ```ini
-   APIFY_TOKEN=your_apify_token_here
-   ACTOR_ID=your_actor_id_here
-   ```
+      - Sign up or log in to your [Apify account](https://apify.com/).
+      - Go to the [Apify Indeed Scraper](https://apify.com/apify/indeed-scraper) actor page.
+      - Navigate to the **API** tab to find your **Personal API Token** and the **Actor ID**.
+      - Create a file named `.env` in the root of the project and add your credentials:
 
-5. **Run the scraper**
+    <!-- end list -->
 
-   ```bash
-   python job_scraper.py
-   ```
+    ```ini
+    # .env
+    APIFY_TOKEN="your_personal_api_token"
+    ACTOR_ID="your_actor_id_for_indeed_scraper"
+    ```
 
-   Enter the job title you want (e.g., *Python Developer*).
-   Results will be saved as:
+### 💻 How to Run
 
-   ```
-   output.csv
-   ```
+1.  Execute the script from your terminal:
+    ```bash
+    python job_scraper.py
+    ```
+2.  When prompted, enter the job title you want to search for (e.g., `Python Developer`).
+3.  The script will run the Apify actor and save the results in a file named `output.csv`.
 
----
+-----
 
-## 📊 Example Output
+## 📊 Sample Output (`output.csv`)
 
-| Job Title        | Company     | Location | Salary  | Job Type  | Rating | Reviews | Posted     | Apply Link        | Description           |
-| ---------------- | ----------- | -------- | ------- | --------- | ------ | ------- | ---------- | ----------------- | --------------------- |
-| Python Developer | XYZ Pvt Ltd | Chennai  | ₹8L-12L | Full-time | 4.2    | 123     | 2 days ago | apply\_link\_here | Cleaned job text here |
+| Job Title | Company | Location | Salary | Job Type | Rating | Reviews | Posted | Apply Link | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Python Developer | XYZ Pvt Ltd | Chennai | ₹8L-12L | Full-time | 4.2 | 123 | 2 days ago | `apply_link_here` | `Cleaned job text...` |
+| Data Scientist | ABC Corp | Bengaluru | ₹10L-15L| Full-time | 4.5 | 450 | 5 days ago | `apply_link_here` | `Cleaned job text...` |
 
----
+-----
 
-## ⚠️ Notes
+## ⚠️ Important Notes
 
-* The first run may take up to **1 minute** (Apify fetches data in the background)
-* Free accounts have limited **credits** on Apify
-* Always keep `.env` private and never push API tokens to GitHub
+  - **First Run Delay**: The initial run might take up to a minute as Apify initializes the actor and performs the scrape in the background.
+  - **Apify Credits**: Be mindful of your Apify usage, as free accounts have a limited number of credits.
+  - **Security**: Never commit your `.env` file or expose your API keys in your version control history.
 
----
+-----
 
-## 📧 Author
+## 👤 Author
 
-👤 **Karthick S**
-GitHub: [Karthih2](https://github.com/Karthih2)
+**Karthick S**
 
----
+  - **GitHub**: [@Karthih2](https://github.com/Karthih2)
