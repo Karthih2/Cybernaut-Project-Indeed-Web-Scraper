@@ -1,3 +1,5 @@
+Of course\! Here is the updated `README.md` with the raw data sample included.
+
 -----
 
 # Indeed Job Scraper with Apify 🤖
@@ -77,10 +79,22 @@ This project automates scraping job postings from **Indeed** using the **Apify I
 
 ## 📊 Sample Output (`output.csv`)
 
+Here is an example of what the final output looks like.
+
+### Formatted Table View
+
 | Job Title | Company | Location | Salary | Job Type | Rating | Reviews | Posted | Apply Link | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Python Developer | XYZ Pvt Ltd | Chennai | ₹8L-12L | Full-time | 4.2 | 123 | 2 days ago | `apply_link_here` | `Cleaned job text...` |
-| Data Scientist | ABC Corp | Bengaluru | ₹10L-15L| Full-time | 4.5 | 450 | 5 days ago | `apply_link_here` | `Cleaned job text...` |
+| Senior QA Engineer | Envestnet | Berwyn, PA | | Full-time | 3.5 | 67 | Just posted| `apply_link_here` | `Cleaned job text...` |
+| Lead Data Brokering...| ValidaTek, Inc.| Scott AFB, IL| $100k-$135k| Full-time | 4.3 | 42 | Just posted| `apply_link_here` | `Cleaned job text...` |
+
+### Raw CSV Data Example
+
+```csv
+"Job ID","Job Title","Company","Location","Remote","Salary","Job Type","Rating","Reviews","Posted","Benefits","Skills (detected)","Apply Link","Description"
+"e0cba95938cf3be7","Senior QA Engineer","Envestnet","Berwyn, PA 19312","No","","Full-time","3.5","67","Just posted","","java, sql, excel, aws","https://www.indeed.com/applystart?jk=e0cba95938cf3be7...","Description Envestnet is seeking a Senior QA Engineer to join our technology team. This is a hybrid role, with in-office work required at our Berwyn, PA office location..."
+"4191ad50bc5a5731","Lead Data Brokering Engineer","ValidaTek, Inc.","Scott AFB, IL 62225","No","$100,000 - $135,000 a year","Full-time","4.3","42","Just posted","","excel","https://www.indeed.com/viewjob?jk=4191ad50bc5a5731...","Company Overview: At ValidaTek, we modernize and optimize IT services to solve some of the most critical challenges facing federal civilian and defense agencies..."
+```
 
 -----
 
