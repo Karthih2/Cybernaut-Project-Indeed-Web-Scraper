@@ -3,8 +3,6 @@
 
 A Python-based web scraping tool that collects job postings from Indeed using **Apify Actors**, processes the results, and saves them in structured formats (CSV/Excel).
 
----
-
 ## 📌 Features
 - 🔎 Search jobs by **title** and **location**
 - ⏳ Limit the number of job postings (e.g., 50 jobs)
@@ -12,14 +10,10 @@ A Python-based web scraping tool that collects job postings from Indeed using **
 - ⚡ Automates data collection with **Apify API**
 - 🛡️ Uses `.env` file to keep API keys safe
 
----
-
 ## 🛠️ Tech Stack
 - Python 3.9+
 - Apify API
 - `requests`, `pandas`, `dotenv`
-
----
 
 ## 📂 Project Structure
 ```
