@@ -1,5 +1,3 @@
-Of course\! Here is the updated `README.md` with the raw data sample included.
-
 -----
 
 # Indeed Job Scraper with Apify 🤖
