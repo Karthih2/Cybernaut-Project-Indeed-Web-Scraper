@@ -1,9 +1,7 @@
-Here’s a **professional README.md** tailored for your **Job Scraper project** 🚀
-
 ```markdown
-# Job Scraper – Indeed & Apify Integration  
+# Job Scraper – Indeed & Apify Integration
 
-A Python-based web scraping tool that collects job postings from Indeed using **Apify Actors**, processes the results, and saves them in structured formats (CSV/Excel).  
+A Python-based web scraping tool that collects job postings from Indeed using **Apify Actors**, processes the results, and saves them in structured formats (CSV/Excel).
 
 ---
 
@@ -12,15 +10,14 @@ A Python-based web scraping tool that collects job postings from Indeed using **
 - ⏳ Limit the number of job postings (e.g., 50 jobs)
 - 📊 Saves data into **CSV** for further analysis
 - ⚡ Automates data collection with **Apify API**
-- 🛡️ Environment variable support (`.env`) to keep API keys safe
+- 🛡️ Uses `.env` file to keep API keys safe
 
 ---
 
 ## 🛠️ Tech Stack
-- **Python 3.9+**
-- [Apify API](https://apify.com/)
+- Python 3.9+
+- Apify API
 - `requests`, `pandas`, `dotenv`
-- CSV/Excel output for easy use
 
 ---
 
@@ -39,7 +36,7 @@ A Python-based web scraping tool that collects job postings from Indeed using **
 ---
 
 ## ⚙️ Setup & Installation
-1. **Clone the repository**  
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Karthih2/Cybernaut-Project-Indeed-Web-Scraper.git
    cd Cybernaut-Project-Indeed-Web-Scraper
@@ -49,8 +46,8 @@ A Python-based web scraping tool that collects job postings from Indeed using **
 
    ```bash
    python -m venv venv
-   venv\Scripts\activate   # on Windows
-   source venv/bin/activate  # on Linux/Mac
+   venv\Scripts\activate   # Windows
+   source venv/bin/activate  # Linux/Mac
    ```
 
 3. **Install dependencies**
@@ -89,33 +86,33 @@ The results will be saved in `output.csv`.
 
 ## 📊 Sample Output
 
-| Job Title        | Company     | Location  | Posted | Link                                          |
-| ---------------- | ----------- | --------- | ------ | --------------------------------------------- |
-| Python Developer | XYZ Pvt Ltd | Chennai   | 1 day  | [https://indeed.com/](https://indeed.com/)... |
-| Data Engineer    | ABC Tech    | Bangalore | 3 days | [https://indeed.com/](https://indeed.com/)... |
+| Job Title        | Company     | Location  | Posted | Link                                       |
+| ---------------- | ----------- | --------- | ------ | ------------------------------------------ |
+| Python Developer | XYZ Pvt Ltd | Chennai   | 1 day  | [https://indeed.com/](https://indeed.com/) |
+| Data Engineer    | ABC Tech    | Bangalore | 3 days | [https://indeed.com/](https://indeed.com/) |
 
 ---
 
 ## 🚀 Future Enhancements
 
 * Add **GUI** for easy usage
-* Store data in **SQL/NoSQL databases**
-* Integration with **email alerts** for new jobs
+* Store data in **databases** (SQL/NoSQL)
+* Integration with **email alerts**
 * Support for **multiple job sites**
 
 ---
 
 ## 🛡️ Security
 
-* `.env` is used to store **API tokens**.
-* Make sure you **never commit `.env`** to GitHub.
-* If you accidentally leaked a key, revoke it immediately.
+* `.env` is used to store **API tokens**
+* **Never commit `.env`** to GitHub
+* If you accidentally leak a key, **revoke it immediately**
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, open an issue first to discuss what you’d like to change.
 
 ---
 
@@ -126,10 +123,4 @@ This project is licensed under the **MIT License**.
 ---
 
 👨‍💻 Developed by **Karthick S** (Cybernaut Internship Project)
-
-```
-
----
-
-Do you want me to also create a **requirements.txt** file for your repo (so users can just `pip install -r requirements.txt`)?
 ```
