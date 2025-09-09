@@ -1,120 +1,93 @@
 ```markdown
-# Job Scraper – Indeed & Apify Integration
+# Indeed Scraper using Apify
 
-A Python-based web scraping tool that collects job postings from Indeed using **Apify Actors**, processes the results, and saves them in structured formats (CSV/Excel).
+This project scrapes job postings from **Indeed** using the **Apify Indeed Scraper**.  
+It fetches job details (title, company, location, salary, job type, rating, reviews, posted date, apply link, and description) and saves the results into a clean **CSV file** for analysis.
 
-## 📌 Features
-- 🔎 Search jobs by **title** and **location**
-- ⏳ Limit the number of job postings (e.g., 50 jobs)
-- 📊 Saves data into **CSV** for further analysis
-- ⚡ Automates data collection with **Apify API**
-- 🛡️ Uses `.env` file to keep API keys safe
+---
 
-## 🛠️ Tech Stack
-- Python 3.9+
-- Apify API
-- `requests`, `pandas`, `dotenv`
+## 🚀 Features
+- Fetch job postings from Indeed automatically  
+- Extracts and cleans job descriptions (removes HTML tags)  
+- Saves results in a structured **CSV file**  
+- Keeps API keys secure with **.env**  
+
+---
 
 ## 📂 Project Structure
 ```
 
-📦 Project Web Scraper
-┣ 📜 job\_scraper.py        # Main script
-┣ 📜 requirements.txt      # Python dependencies
-┣ 📜 .gitignore            # Ignores .env & other unnecessary files
-┣ 📜 README.md             # Project documentation
-┗ 📜 output.csv            # Sample scraped job postings
+├── job\_scraper.py         # Main Python script for the scraper
+├── .env                   # Stores APIFY\_TOKEN and ACTOR\_ID (not committed to GitHub)
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
 
 ````
 
 ---
 
-## ⚙️ Setup & Installation
-1. **Clone the repository**
+## 🛠️ Setup & Installation
+
+1. **Clone this repository**
    ```bash
    git clone https://github.com/Karthih2/Cybernaut-Project-Indeed-Web-Scraper.git
    cd Cybernaut-Project-Indeed-Web-Scraper
 ````
 
-2. **Create and activate virtual environment**
-
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate   # Windows
-   source venv/bin/activate  # Linux/Mac
-   ```
-
-3. **Install dependencies**
+2. **Install dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Set up environment variables**
-   Create a `.env` file in the project root:
+3. **Get your Apify API Token & Actor ID**
+
+   * Go to [Apify Indeed Scraper](https://apify.com/apify/indeed-scraper)
+   * Click **Try for free** and sign in (new accounts get free credits)
+   * Copy your **API Token** and **Actor ID** from the Apify dashboard
+
+4. **Update your `.env` file**
+   Create a `.env` file in the project root (template included):
 
    ```ini
-   APIFY_TOKEN=your_apify_api_token
-   ACTOR_ID=your_actor_id
+   APIFY_TOKEN=your_apify_token_here
+   ACTOR_ID=your_actor_id_here
+   ```
+
+5. **Run the scraper**
+
+   ```bash
+   python job_scraper.py
+   ```
+
+   Enter the job title you want (e.g., *Python Developer*).
+   Results will be saved as:
+
+   ```
+   output.csv
    ```
 
 ---
 
-## ▶️ Usage
+## 📊 Example Output
 
-Run the script:
-
-```bash
-python job_scraper.py
-```
-
-You’ll be prompted to enter:
-
-* Job Title (e.g., `Python Developer`)
-* Location (e.g., `Chennai`)
-* Number of job postings to fetch (e.g., `50`)
-
-The results will be saved in `output.csv`.
+| Job Title        | Company     | Location | Salary  | Job Type  | Rating | Reviews | Posted     | Apply Link        | Description           |
+| ---------------- | ----------- | -------- | ------- | --------- | ------ | ------- | ---------- | ----------------- | --------------------- |
+| Python Developer | XYZ Pvt Ltd | Chennai  | ₹8L-12L | Full-time | 4.2    | 123     | 2 days ago | apply\_link\_here | Cleaned job text here |
 
 ---
 
-## 📊 Sample Output
+## ⚠️ Notes
 
-| Job Title        | Company     | Location  | Posted | Link                                       |
-| ---------------- | ----------- | --------- | ------ | ------------------------------------------ |
-| Python Developer | XYZ Pvt Ltd | Chennai   | 1 day  | [https://indeed.com/](https://indeed.com/) |
-| Data Engineer    | ABC Tech    | Bangalore | 3 days | [https://indeed.com/](https://indeed.com/) |
-
----
-
-## 🚀 Future Enhancements
-
-* Add **GUI** for easy usage
-* Store data in **databases** (SQL/NoSQL)
-* Integration with **email alerts**
-* Support for **multiple job sites**
+* The first run may take up to **1 minute** (Apify fetches data in the background)
+* Free accounts have limited **credits** on Apify
+* Always keep `.env` private and never push API tokens to GitHub
 
 ---
 
-## 🛡️ Security
+## 📧 Author
 
-* `.env` is used to store **API tokens**
-* **Never commit `.env`** to GitHub
-* If you accidentally leak a key, **revoke it immediately**
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome. For major changes, open an issue first to discuss what you’d like to change.
+👤 **Karthick S**
+GitHub: [Karthih2](https://github.com/Karthih2)
 
 ---
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
-👨‍💻 Developed by **Karthick S** (Cybernaut Internship Project)
-```
